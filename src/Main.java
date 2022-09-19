@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Задание 5");
         String firstName = str.substring(str.indexOf(" "), str.lastIndexOf(" "));
         String lastName = str.substring(0, str.indexOf(" "));
-        String middleName = str.substring(str.lastIndexOf(" "), str.length() - 1);
+        String middleName = str.substring(str.lastIndexOf(" "));
 
         System.out.println("Имя сотрудника — " + firstName);
         System.out.println("Фамилия сотрудника — " + lastName);
@@ -78,6 +78,7 @@ public class Main {
     }
 
     static void task_8() {
+        System.out.println("Задание 8");
         String input = "aabccddefgghiijjkk";
         char[] chars = input.toCharArray();
         StringBuilder sb = new StringBuilder();
