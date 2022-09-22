@@ -12,7 +12,7 @@ public class Main {
         task_5(fullName);
         fullName = "ivanov ivan ivanovich";
         task_6(fullName);
-        task_7();
+        task_7("02468A","13579BDF");
         task_8();
     }
 
@@ -55,24 +55,16 @@ public class Main {
         System.out.println("***\n");
     }
 
-    static void task_7() {
+    static void task_7(String str1, String str2) {
         System.out.println("Задание 7");
-        String s1 = "13579";
-        String s2 = "246";
         StringBuilder sb = new StringBuilder();
-        int lngt;
-        if (s1.length() >= s2.length()) {
-            lngt = s1.length();
-        } else {
-            lngt = s2.length();
+        int length = Math.max(str1.length(), str2.length());
+        for (int i = 0; i < length; i++) {
+            if (i < str1.length()) sb.append(str1.charAt(i));
+            else sb.append("?");
+            if (i < str2.length()) sb.append(str2.charAt(i));
+            else sb.append("?");
         }
-        for (int i = 0; i < lngt; i++) {
-            if (i < s1.length()) sb.append(s1.charAt(i));
-            else sb.append(" ");
-            if (i < s2.length()) sb.append(s2.charAt(i));
-            else sb.append(" ");
-        }
-
         System.out.println(sb);
         System.out.println("***\n");
     }
